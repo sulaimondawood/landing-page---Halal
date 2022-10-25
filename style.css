@@ -308,13 +308,13 @@ body {
   padding-top: 86px;
   padding-right: 74px;
   padding-bottom: 74px;
-  padding-right: 64px;
+  padding-left: 64px;
 }
 .editions .top {
   display: flex;
   justify-content: space-between;
-  padding-left: 74px;
-  padding-right: 58px;
+  /* padding-left: 74px; */
+  /* padding-right: 74px; */
 }
 .editions .top > div {
   display: flex;
@@ -821,6 +821,7 @@ body {
 }
 .blogs .bottom .row {
   display: flex;
+  padding-left: 40px;
   gap: 22px;
 }
 .blogs .bottom .card {
@@ -931,6 +932,7 @@ body {
   padding-top: 140px;
   padding-bottom: 18px;
   position: relative;
+  overflow-y: hidden;
 }
 .footer .footer-center .top {
   font-family: "DM Sans", sans-serif;
