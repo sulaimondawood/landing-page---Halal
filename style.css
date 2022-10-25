@@ -343,15 +343,13 @@ body {
   padding-top: 86px;
 }
 .editions .bottom .gallery {
-  /* padding-left: 74px;
-  padding-right: 65px; */
   display: grid;
   grid-template-columns: 392px 419px 392px;
-  padding: 20px;
   background-color: var(--white);
+  padding: 20px;
   height: 588px;
   gap: 30px;
-  width: 1300px;
+  max-width: 1300px;
   margin: 0 auto;
 
   justify-content: center;
