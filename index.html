@@ -17,9 +17,15 @@
         <nav class="nav container">
           <p class="logo">The Internal Award</p>
           <div class="nav-links">
-            <a href="#About">About</a>
-            <a href="#Nominee">Nominee</a>
+            <a href="#Nominee">About</a>
             <a href="#Editions">Editions</a>
+            <a href="#categories">Nominate</a>
+            <a href="#sponsor">Sponsorship</a>
+          </div>
+          <div class="nav-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </nav>
 
@@ -134,22 +140,33 @@
         <div class="bottom">
           <div class="gallery">
             <div>
-              <img class="img1" src="./assets/DSC_3905 (2).png" alt="" />
-              <img class="img1" src="./assets/DSC_3903 2.png" alt="" />
+              <img
+                class="img1 gal-img"
+                src="./assets/DSC_3905 (2).png"
+                alt=""
+              />
+              <img class="img1 gal-img" src="./assets/DSC_3903 2.png" alt="" />
             </div>
             <div class="img3-cont">
-              <img class="img3" src="./assets/awards ib (41) (1).png" alt="" />
+              <img
+                class="img3 gal-img"
+                src="./assets/awards ib (41) (1).png"
+                alt=""
+              />
               <img class="shot" src="./assets/Group 118.svg" alt="" />
             </div>
             <div>
-              <img class="img4" src="./assets/DSC_3915.png" alt="" />
-              <img class="img4" src="./assets/11.png" alt="" />
-              <img class="img4" src="./assets/DSC_3852 2.png" alt="" />
+              <img class="img4 gal-img" src="./assets/DSC_3915.png" alt="" />
+              <img class="img4 gal-img" src="./assets/11.png" alt="" />
+              <img class="img4 gal-img" src="./assets/DSC_3852 2.png" alt="" />
             </div>
           </div>
+          <!-- <div class="gal-overlay"></div> -->
           <div class="click-right">
             <img src="./assets/Icon Color.svg" alt="" />
           </div>
+
+          <img src="" alt="" class="selected-img" />
         </div>
       </section>
 
@@ -210,14 +227,14 @@
       </section>
 
       <!-- categories -->
-      <section class="categories">
+      <section id="categories" class="categories">
         <div class="container">
           <div class="top">
             <div>
               <h1 class="title tit">The Most Influential Award Series</h1>
               <img class="arrow" src="./assets/ArrowRound.svg" alt="" />
             </div>
-            <h1 class="title">Categories</h1>
+            <h1 class="title t">Categories</h1>
           </div>
           <img src="./assets/undraw_awards_fieb 1.svg" alt="" class="vector" />
           <div class="bottom">
@@ -236,7 +253,7 @@
                 <button>Nominate</button>
               </div>
               <div class="card-wrap">
-                <div class="card card2">
+                <div class="card">
                   <p class="num">2</p>
                   <p class="desc">Oyo State Youth of the Year Award</p>
                   <p class="details">
@@ -275,7 +292,7 @@
       </section>
 
       <!-- sponsoe -->
-      <section class="sponsor container">
+      <section id="sponsor" class="sponsor container">
         <img src="./assets/DottedCircleHalf.svg" alt="" />
         <div class="top">
           <h1>Sponsorship Benefit</h1>
@@ -308,7 +325,7 @@
                 <button class="spons">Sponsor</button>
               </div>
             </div>
-            <div class="card scard-2">
+            <div class="card">
               <div class="topp">
                 <p class="basic">Basic</p>
                 <h1 class="naira">$500</h1>
@@ -511,15 +528,6 @@
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".swiper", {
-        slidesPerView: "3",
-        grabCursor: true,
-
-        direction: "horizontal",
-        // loop: true,
-        // If we need pagination
-      });
-    </script>
+    <script src="./app.js"></script>
   </body>
 </html>
