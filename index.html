@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>WithHALAL --DrCloud</title>
   </head>
@@ -142,6 +146,9 @@
               <img class="img4" src="./assets/11.png" alt="" />
               <img class="img4" src="./assets/DSC_3852 2.png" alt="" />
             </div>
+          </div>
+          <div class="click-right">
+            <img src="./assets/Icon Color.svg" alt="" />
           </div>
         </div>
       </section>
@@ -370,9 +377,9 @@
         <div class="container">
           <div class="top">
             <h1>The Blogs</h1>
-            <div class="bottom">
-              <div class="row">
-                <div class="card">
+            <div class="bottom swiper">
+              <div class="row swiper-wrapper">
+                <div class="card swiper-slide">
                   <img src="./assets/Rectangle 9.png" alt="" />
                   <h2>The Award For The Most Influential Person</h2>
                   <p class="desc-blog">
@@ -386,7 +393,7 @@
                     >20 September 2022 - <span>2 Mins Read</span>
                   </p>
                 </div>
-                <div class="card">
+                <div class="card swiper-slide">
                   <img src="./assets/image 2.png" alt="" />
                   <h2>The Award For The Most Influential Person</h2>
                   <p class="desc-blog">
@@ -399,7 +406,35 @@
                     20 September 2022 - <span>2 Mins Read</span>
                   </p>
                 </div>
-                <div class="card">
+                <div class="card swiper-slide">
+                  <img src="./assets/Rectangle 9 (1).png" alt="" />
+                  <h2>The Award For The Most Influential Person</h2>
+                  <p class="desc-blog">
+                    Oyo state most influential award series provides a unique
+                    opportunity to meet and connect with notable people in the
+                    State, from different categories.
+                  </p>
+                  <a href="#">Read More</a>
+
+                  <p class="blog-d">
+                    20 September 2022 - <span>2 Mins Read</span>
+                  </p>
+                </div>
+                <div class="card swiper-slide">
+                  <img src="./assets/Rectangle 9 (1).png" alt="" />
+                  <h2>The Award For The Most Influential Person</h2>
+                  <p class="desc-blog">
+                    Oyo state most influential award series provides a unique
+                    opportunity to meet and connect with notable people in the
+                    State, from different categories.
+                  </p>
+                  <a href="#">Read More</a>
+
+                  <p class="blog-d">
+                    20 September 2022 - <span>2 Mins Read</span>
+                  </p>
+                </div>
+                <div class="card swiper-slide">
                   <img src="./assets/Rectangle 9 (1).png" alt="" />
                   <h2>The Award For The Most Influential Person</h2>
                   <p class="desc-blog">
@@ -475,5 +510,16 @@
         </div>
       </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: "3",
+        grabCursor: true,
+
+        direction: "horizontal",
+        // loop: true,
+        // If we need pagination
+      });
+    </script>
   </body>
 </html>
