@@ -862,9 +862,33 @@ main {
   .editions .top .desc .year {
     color: var(--lightOrange);
   }
+
+  .editions .bottom .gallery{
+    grid-template-columns: repeat(1, 1fr) !important;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .editions .bottom .gallery div{
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .editions .bottom .gallery div img, .editions .bottom .y-2021 img{
+    max-width: 100%;
+  }
+
+  .editions .bottom{
+    padding-inline: 0 !important;
+  }
+
+  .editions .bottom .click-right{
+    display: none;
+  }
 }
 
-/* Year conatainer */
+/* Year container */
 
 .years-sec {
   background-color: var(--white);
