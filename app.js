@@ -15,7 +15,7 @@ const swiper = new Swiper(".swiper", {
     //   slidesPerView: 3,
     // },
     // when window width is >= 640px
-    640: {
+    770: {
       slidesPerView: 3,
     },
   },
@@ -25,9 +25,15 @@ const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav-links");
 const galleryImgs = document.querySelectorAll(".gal-img");
 const selected = document.querySelector(".selected-img");
+const hrefTag = document.querySelectorAll(".href-tag");
+
 toggle.addEventListener("click", () => {
   nav.classList.toggle("show-nav-links");
-  console.log(toggle, nav, selectedImg);
+  if (nav.classList.contains("show-nav-links")) {
+    document.body.style.overflowY = "hidden";
+  } else {
+    document.body.style.overflowY = "auto";
+  }
 });
 
 galleryImgs.forEach((img) => {
@@ -35,7 +41,6 @@ galleryImgs.forEach((img) => {
   img.addEventListener("click", () => {
     selected.src = img.src;
     selected.style.opacity = "1";
-    // console.log(selected);
   });
 });
 
@@ -43,4 +48,11 @@ selected.addEventListener("click", () => {
   // selected.src = "";
   selected.style.backgroundColor = "none";
   selected.style.opacity = "0";
+});
+
+hrefTag.forEach((href) => {
+  href.addEventListener("click", () => {
+    nav.classList.toggle("show-nav-links");
+    document.body.style.overflowY = "auto";
+  });
 });
