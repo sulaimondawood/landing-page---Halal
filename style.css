@@ -862,6 +862,32 @@ main {
   .editions .top .desc .year {
     color: var(--lightOrange);
   }
+  /* .selected-img {
+    display: none;
+  }
+  .editions .bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .editions .bottom .gallery {
+    display: flex;
+    width: 320px;
+    overflow-x: hidden;
+    position: relative;
+
+    margin: 0 auto;
+  }
+  .editions .bottom .gallery > div {
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    display: flex;
+  }
+  .click-right {
+    display: none;
+  } */
 }
 
 /* Year conatainer */
@@ -1945,7 +1971,7 @@ main {
   }
 
   .hr {
-    width: 354px;
+    width: 90%;
   }
 
   .footer .footer-center .footer-desc {
