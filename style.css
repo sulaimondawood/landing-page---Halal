@@ -862,35 +862,33 @@ main {
   .editions .top .desc .year {
     color: var(--lightOrange);
   }
-  /* .selected-img {
-    display: none;
-  }
-  .editions .bottom {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10px;
-  }
-  .editions .bottom .gallery {
-    display: flex;
-    width: 320px;
-    overflow-x: hidden;
-    position: relative;
 
-    margin: 0 auto;
+  .editions .bottom .gallery {
+    grid-template-columns: repeat(1, 1fr) !important;
+    place-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .editions .bottom .gallery > div {
-    position: absolute;
-    left: 0;
-    flex-direction: column;
-    display: flex;
+
+  .editions .bottom .gallery div {
+    width: 100%;
+    margin-inline: auto;
   }
-  .click-right {
+
+  .editions .bottom .gallery div img,
+  .editions .bottom .y-2021 img {
+    max-width: 100%;
+  }
+
+  .editions .bottom {
+    padding-inline: 0 !important;
+  }
+  .editions .bottom .click-right {
     display: none;
-  } */
+  }
 }
 
-/* Year conatainer */
+/* Year container */
 
 .years-sec {
   background-color: var(--white);
