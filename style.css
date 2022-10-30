@@ -886,6 +886,29 @@ main {
   .editions .bottom .click-right {
     display: none;
   }
+  .editions .bottom .y-2018 .img3-cont {
+    height: 200px;
+  }
+
+  .editions .bottom .y-2018 .img3 {
+    height: 200px !important;
+    width: 100%;
+  }
+  .editions .bottom .y-2021 .gal-img {
+    height: 200px !important;
+  }
+  .editions .bottom .y-2020 .gal-img {
+    height: 200px !important;
+  }
+  .editions .bottom .y-2019 .gal-img {
+    height: 200px !important;
+  }
+  .editions .bottom .y-2019 .img3-cont {
+    height: 200px;
+  }
+  .editions .bottom .y-2018 .img1 {
+    height: 200px !important;
+  }
 }
 
 /* Year container */
@@ -1880,7 +1903,7 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.46);
   margin-top: 23px;
   margin-bottom: 32px;
-  width: 854px;
+  width: 90%;
 }
 
 .footer .footer-center .footer-desc {
