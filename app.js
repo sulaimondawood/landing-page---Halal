@@ -31,6 +31,11 @@ const yearDiv = document.querySelectorAll(".year-div");
 const yearContainer = document.querySelector(".year-container");
 const yearSec = document.querySelector(".years-sec");
 
+const day = document.querySelector(".day-num");
+const hour = document.querySelector(".hour-num");
+const min = document.querySelector(".min-num");
+const sec = document.querySelector(".sec-num");
+
 toggle.addEventListener("click", () => {
   nav.classList.toggle("show-nav-links");
   if (nav.classList.contains("show-nav-links")) {
@@ -77,3 +82,22 @@ yearSec.addEventListener("click", (e) => {
     element.classList.add("active");
   }
 });
+
+const deadline = new Date("Jan 29, 2023 15:37:25").getTime();
+const x = setInterval(function () {
+  const now = new Date().getTime();
+  const t = deadline - now;
+  const days = Math.floor(t / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+  day.textContent = days;
+  hour.textContent = hours;
+  min.textContent = minutes;
+  sec.textContent = seconds;
+  if (t < 0) {
+    clearInterval(x);
+    document.getElementsByClassName("date-card-wrapper").innerHTML = "EXPIRED";
+  }
+}, 1000);
