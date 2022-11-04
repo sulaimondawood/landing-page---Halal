@@ -7,7 +7,7 @@ const swiper = new Swiper(".swiper", {
   // If we need pagination
   breakpoints: {
     // when window width is >= 320px
-    320: {
+    300: {
       slidesPerView: 1.3,
     },
     // when window width is >= 480px
