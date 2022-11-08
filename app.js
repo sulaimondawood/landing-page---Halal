@@ -23,6 +23,11 @@ const swiper = new Swiper(".swiper", {
 const swiper2 = new Swiper(".swiper2", {
   slidesPerView: "4.3",
   grabCursor: true,
+  breakpoints: {
+    300: {
+      direction: "vertical",
+    },
+  },
 });
 
 const toggle = document.querySelector(".nav-toggle");
@@ -103,22 +108,24 @@ const selectedI = document.querySelector(".selected-img");
 const selected = document.querySelector(".sel-cont");
 const prevImg = document.querySelector(".r-1");
 const nextImg = document.querySelector(".r-2");
+const close = document.querySelector(".click-close");
 
 console.log(prevImg, nextImg);
 let index = 0;
 // Gallery
 galleryImgs.forEach((img, index) => {
   img.addEventListener("click", () => {
+    index = index;
     selectedI.src = img.src;
     selected.style.opacity = "1";
   });
 });
 
-// selected.addEventListener("click", () => {
-//   // selected.src = "";
-//   selected.style.backgroundColor = "none";
-//   selected.style.opacity = "0";
-// });
+close.addEventListener("click", () => {
+  // selected.src = "";
+  selected.style.backgroundColor = "none";
+  selected.style.opacity = "0";
+});
 
 yearSec.addEventListener("click", (e) => {
   // console.log(e.target.dataset.id);
@@ -170,9 +177,10 @@ nextImg.addEventListener("click", () => {
   } else {
     selectedI.src = galleryImgs[index++].src;
   }
+  console.log(index);
 });
 prevImg.addEventListener("click", () => {
-  console.log(galleryImgs);
+  // console.log(galleryImgs);
   if (index < 1) {
     selectedI.src = galleryImgs[galleryImgs.length].src;
   } else {
@@ -187,6 +195,7 @@ function showCurrImg(n) {
     return (index = 0);
   }
 }
+
 const day = document.querySelector(".day-num");
 const hour = document.querySelector(".hour-num");
 const min = document.querySelector(".min-num");

@@ -353,11 +353,13 @@ main {
   padding: 20px 40px;
   border-radius: 50px;
   font-weight: 700;
+  text-decoration: none;
+  color: var(--black);
   cursor: pointer;
 }
 .nominee-container .nominee-btn:hover {
   background-color: var(--extralightOrange);
-  box-shadow: 0 5px 10px #dfc09180;
+  box-shadow: 0 5px 10px #00000040;
   transition: 0.1s;
 }
 
@@ -554,6 +556,7 @@ main {
   width: 630px;
   border: none;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px #00000070;
   /* position: relative; */
   /* height: 100%; */
   height: 432px;
@@ -643,9 +646,9 @@ main {
   .award-right .img-wrapper .blur-cont .img {
     width: 100%;
     /* position: relative; */
-    height: 100%;
+    height: 232px;
   }
-  .award-right .img-wrapper .blur-cont::after {
+  /* .award-right .img-wrapper .blur-cont::after {
     background-color: rgba(0, 0, 0, 0.47);
     position: absolute;
     width: 300px;
@@ -654,7 +657,7 @@ main {
     top: 15px;
     left: 15px;
     border-radius: 15px;
-  }
+  } */
   .play {
     position: absolute;
     left: 50%;
@@ -762,6 +765,7 @@ main {
 
 .editions .bottom .gallery .img1 {
   /* width: 392px; */
+  position: relative;
   height: 261px;
 }
 .editions .bottom .gallery .img3-cont {
@@ -774,9 +778,26 @@ main {
   height: 100%;
   width: 100%;
   content: "";
+  opacity: 0;
   left: 0;
 
   background-color: rgba(0, 0, 0, 0.6);
+} */
+/* .editions .bottom .gallery .img3-cont:hover:after {
+  opacity: 1;
+} */
+/* .editions .bottom .gallery .img1::after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.editions .bottom .gallery .img1:hover:after {
+  opacity: 1;
 } */
 .editions .bottom .gallery .gal-img:hover .gal-overlay {
   position: absolute;
@@ -815,6 +836,17 @@ main {
   object-position: center;
   background-color: white;
   padding: 55px 66px;
+}
+.click-close {
+  position: absolute;
+  font-size: 40px;
+  top: 5px;
+  right: 50px;
+  cursor: pointer;
+}
+.click-close:hover {
+  transition: 0.3s;
+  transform: rotate(45deg);
 }
 .selected-img {
   width: 100%;
@@ -865,8 +897,22 @@ main {
   object-fit: cover;
   width: 400px;
 }
-/* .editions .bottom .gallery div > .gal-img::after {
 
+/* .editions .bottom .gallery div > img {
+  position: relative;
+
+}
+
+.editions .bottom .gallery div > img:hover {
+  content: "";
+  background-color: red;
+  position: absolute;
+  display: block;
+  z-index: 99;
+  height: 400px;
+  width: 400px;
+} */
+.editions .bottom .gallery div > .gal-img::after {
   content: "";
   position: absolute;
   height: 100%;
@@ -875,7 +921,7 @@ main {
   left: 0;
 
   background-color: rgba(0, 0, 0, 0.6);
-} */
+}
 
 @media screen and (max-width: 768px) {
   .editions {
@@ -915,6 +961,9 @@ main {
   }
   .editions .top .desc .year {
     color: var(--lightOrange);
+  }
+  .sel-cont {
+    display: none;
   }
 
   .editions .bottom .gallery {
@@ -1423,11 +1472,11 @@ main {
   }
   .categories .bottom .card-wrapper {
     flex-direction: column;
-    gap: 10px;
+    gap: 0px;
   }
   .categories .bottom .card-wrapper .card {
     width: 100%;
-    height: 570px;
+    /* height: 570px; */
   }
 
   .categories .bottom .card-wrapper .card2 {
@@ -1479,7 +1528,8 @@ main {
   padding-top: 75px;
   padding-bottom: 96px;
   padding-left: 108px;
-  padding-right: 150px;
+  padding-right: 108px;
+  position: relative;
 }
 .sponsor .top {
   display: flex;
@@ -1526,14 +1576,15 @@ main {
 .sponsor > .bottom .card-wrapper {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   padding-top: 18px;
 }
 .sponsor .bottom .card-wrapper .card {
   box-shadow: 41px 13px 30px rgba(0, 0, 0, 0.1);
   font-family: "DM Sans", sans-serif;
   color: var(--lightDark);
-  width: 280px;
+  /* width: 240px; */
+  width: 240px;
   height: fit-content;
   padding-top: 24px;
   padding-bottom: 15px;
@@ -1580,7 +1631,7 @@ main {
 
 .sponsor .bottom .card-wrapper .card .topp .basic {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 32px;
   text-align: center;
   letter-spacing: 0.2px;
@@ -1589,7 +1640,7 @@ main {
   text-align: center;
   letter-spacing: 0.2px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 23px;
   line-height: 32px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   padding: 16px 0;
@@ -1610,10 +1661,13 @@ main {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  padding: 10px 68px;
+  padding: 10px;
   border-radius: 50px;
   border: none;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
+  /* margin: 0 auto; */
   margin-top: 28px;
 }
 .sponsor .bottom .card-wrapper .card:hover .spons {
@@ -1678,7 +1732,7 @@ main {
 
   .sponsor > .bottom .card-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
     padding-top: 30px;
   }
