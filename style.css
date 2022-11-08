@@ -728,10 +728,6 @@ main {
   padding-right: 74px;
   position: relative;
 }
-.click-right {
-  color: white;
-  padding-left: 10px;
-}
 
 .editions .bottom {
   display: none;
@@ -801,7 +797,7 @@ main {
 .editions .bottom .gallery .img4 {
   height: 171px;
 }
-.selected-img {
+.sel-cont {
   position: absolute;
   z-index: 999;
   left: 50%;
@@ -818,7 +814,24 @@ main {
   object-fit: cover;
   object-position: center;
   background-color: white;
-  padding: 20px;
+  padding: 55px 66px;
+}
+.selected-img {
+  width: 100%;
+  height: 100%;
+}
+.click-right {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  cursor: pointer;
+}
+.r-2 {
+  transform: rotate(180deg);
+  right: 20px;
+}
+.r-1 {
+  left: 20px;
 }
 
 .y-2019 .img3 {
@@ -1266,8 +1279,12 @@ main {
   gap: 26px;
   width: 258px;
   padding: 30px;
-  height: 690px;
+  /* height: 690px; */
   z-index: 999;
+}
+.categories .bottom .card-wrapper .card .read-more {
+  color: var(--lightOrange);
+  cursor: pointer;
 }
 
 .categories .bottom .card-wrapper .card:hover {
@@ -1294,6 +1311,12 @@ main {
   line-height: 32px;
 }
 
+.span-hide {
+  display: none;
+}
+.span-show {
+  display: inline;
+}
 .categories .bottom .card-wrapper .card .details {
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
@@ -1511,6 +1534,7 @@ main {
   font-family: "DM Sans", sans-serif;
   color: var(--lightDark);
   width: 280px;
+  height: fit-content;
   padding-top: 24px;
   padding-bottom: 15px;
   padding-left: 33px;
@@ -1518,6 +1542,20 @@ main {
   border-radius: 30px;
 
   /* backdrop-filter:; */
+}
+
+.li-cont-hide {
+  display: none;
+}
+.li-cont-show {
+  display: block;
+}
+.sponsor .bottom .card-wrapper .card .see-more {
+  color: var(--lightDark);
+  display: flex;
+  justify-content: flex-end;
+  color: var(--lightOrange);
+  cursor: pointer;
 }
 .sponsor .bottom .card-wrapper .card:hover ul li {
   color: var(--white);
@@ -1542,7 +1580,7 @@ main {
 
 .sponsor .bottom .card-wrapper .card .topp .basic {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 32px;
   text-align: center;
   letter-spacing: 0.2px;
@@ -1551,7 +1589,7 @@ main {
   text-align: center;
   letter-spacing: 0.2px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 32px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   padding: 16px 0;
