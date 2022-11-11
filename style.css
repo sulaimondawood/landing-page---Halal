@@ -1036,6 +1036,7 @@ main {
   background-color: var(--lightOrange);
   padding: 67px 0;
 }
+
 .years-sec .year-container div {
   display: flex;
   cursor: pointer;
@@ -1051,6 +1052,7 @@ main {
 }
 .years-sec .year-container div .year {
   font-weight: 900;
+  cursor: default;
   font-size: 48px;
   color: transparent;
   font-family: "Work Sans", sans-serif;
@@ -1063,6 +1065,7 @@ main {
 }
 .years-sec .year-container div .desc {
   font-family: "DM Sans", sans-serif;
+  cursor: default;
 }
 
 @media screen and (max-width: 769px) {

@@ -20,15 +20,6 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
-const swiper2 = new Swiper(".swiper2", {
-  slidesPerView: "4.3",
-  grabCursor: true,
-  breakpoints: {
-    300: {
-      direction: "vertical",
-    },
-  },
-});
 
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav-links");
@@ -142,6 +133,18 @@ yearSec.addEventListener("click", (e) => {
     const element = document.getElementById(id);
     element.classList.add("active");
   }
+  // if (id) {
+  //   yearDiv.forEach((item) => {
+  //     item.classList.remove("active");
+  //     e.target.classList.add("active");
+  //   });
+
+  //   gallery.forEach((gal) => {
+  //     gal.classList.remove("active");
+  //   });
+  //   const element = document.getElementById(id);
+  //   element.classList.add("active");
+  // }
 });
 
 // function showSlides(n) {
